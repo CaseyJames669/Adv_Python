@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "E01/getlines.py", line 8, in <module>
+    line = input("**Enter another line of text:\n")
+EOFError: EOF when reading a line

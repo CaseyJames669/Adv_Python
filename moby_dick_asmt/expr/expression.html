@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module expression</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>expression</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/walker/classes/c153/fall_13/in2post/expression.py">/home/walker/classes/c153/fall_13/in2post/expression.py</a></font></td></tr></table>
+    <p><tt>Contains&nbsp;functions&nbsp;to&nbsp;evaluate&nbsp;postfix&nbsp;and&nbsp;infix&nbsp;expressions&nbsp;with<br>
+the&nbsp;operators&nbsp;+,&nbsp;-,&nbsp;*,&nbsp;/,&nbsp;and&nbsp;^&nbsp;for&nbsp;add,&nbsp;subtract,&nbsp;multiply,&nbsp;divide,<br>
+and&nbsp;exponentiation,&nbsp;resp.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-eval_infix"><strong>eval_infix</strong></a>(expr)</dt><dd><tt>Evaluate&nbsp;the&nbsp;infix&nbsp;expression&nbsp;and&nbsp;return&nbsp;a&nbsp;float&nbsp;value<br>
+&nbsp;<br>
+Precondition:&nbsp;&nbsp;expr&nbsp;must&nbsp;be&nbsp;a&nbsp;valid&nbsp;infix&nbsp;expression&nbsp;with&nbsp;all&nbsp;tokens<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;separated&nbsp;by&nbsp;white&nbsp;space.<br>
+Postcondition:&nbsp;returns&nbsp;the&nbsp;floating&nbsp;point&nbsp;value&nbsp;of&nbsp;the&nbsp;expression<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;expression&nbsp;is&nbsp;not&nbsp;valid.</tt></dd></dl>
+ <dl><dt><a name="-eval_postfix"><strong>eval_postfix</strong></a>(expr)</dt><dd><tt>Evaluate&nbsp;the&nbsp;postfix&nbsp;expression&nbsp;and&nbsp;return&nbsp;a&nbsp;float&nbsp;value<br>
+&nbsp;<br>
+Precondition:&nbsp;expr&nbsp;is&nbsp;a&nbsp;valid&nbsp;postfix&nbsp;expression&nbsp;with&nbsp;all&nbsp;tokens<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;separated&nbsp;by&nbsp;while&nbsp;space<br>
+Postcondition:&nbsp;returns&nbsp;the&nbsp;floating&nbsp;point&nbsp;value&nbsp;of&nbsp;the&nbsp;expression<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;expression&nbsp;contains&nbsp;invalid&nbsp;token&nbsp;or<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;return&nbsp;None&nbsp;or&nbsp;raise&nbsp;IndexError&nbsp;if&nbsp;ill-formed</tt></dd></dl>
+ <dl><dt><a name="-in2post"><strong>in2post</strong></a>(expr)</dt><dd><tt>Translate&nbsp;expr&nbsp;from&nbsp;infix&nbsp;to&nbsp;postfix&nbsp;notation<br>
+&nbsp;<br>
+Precondition:&nbsp;expr&nbsp;is&nbsp;a&nbsp;valid&nbsp;&nbsp;infix&nbsp;expression&nbsp;with&nbsp;all<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'tokens'&nbsp;separated&nbsp;by&nbsp;white&nbsp;space<br>
+Postcondition:&nbsp;returns&nbsp;a&nbsp;white&nbsp;space&nbsp;separated&nbsp;string&nbsp;of&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'tokens'&nbsp;that&nbsp;is&nbsp;an&nbsp;equivalent&nbsp;postfix&nbsp;representation.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns&nbsp;None&nbsp;if&nbsp;an&nbsp;the&nbsp;expression&nbsp;is&nbsp;invalid</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>ops</strong> = {'*': (20, 'L'), '+': (10, 'L'), '-': (10, 'L'), '/': (20, 'L'), '^': (30, 'R')}</td></tr></table>
+</body></html>

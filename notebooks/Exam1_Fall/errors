@@ -1,0 +1,4 @@
+  File "Eprob3.py", line 5
+    argv = program_name file_name
+                                ^
+SyntaxError: invalid syntax

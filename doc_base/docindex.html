@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module docindex</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>docindex</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/walker/classes/c153/fall_13/words/docindex.py">/home/walker/classes/c153/fall_13/words/docindex.py</a></font></td></tr></table>
+    <p><tt>Contains&nbsp;<a href="#DocIndex">DocIndex</a>&nbsp;class&nbsp;definition.<br>
+A&nbsp;<a href="#DocIndex">DocIndex</a>&nbsp;maintains&nbsp;the&nbsp;text&nbsp;information&nbsp;for&nbsp;a&nbsp;single&nbsp;text&nbsp;document,<br>
+including<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document&nbsp;name&nbsp;and&nbsp;contents,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;unique&nbsp;words&nbsp;in&nbsp;the&nbsp;document,&nbsp;and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contexts&nbsp;for&nbsp;words.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="word.html">word</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="docindex.html#DocIndex">DocIndex</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DocIndex">class <strong>DocIndex</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#DocIndex">DocIndex</a>(document,&nbsp;title)&nbsp;-&gt;&nbsp;initialized&nbsp;<a href="builtins.html#object">object</a>&nbsp;for&nbsp;one&nbsp;document<br>
+&nbsp;<br>
+Manage&nbsp;an&nbsp;index&nbsp;of&nbsp;words&nbsp;occurring&nbsp;in&nbsp;a&nbsp;text&nbsp;document,&nbsp;including<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document&nbsp;name&nbsp;and&nbsp;lines&nbsp;of&nbsp;the&nbsp;document.<br>
+Can&nbsp;report<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;of&nbsp;unique&nbsp;words<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contexts&nbsp;for&nbsp;words<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="DocIndex-__init__"><strong>__init__</strong></a>(self, contents, label)</dt><dd><tt>Construct&nbsp;a&nbsp;new&nbsp;index&nbsp;for&nbsp;the&nbsp;given&nbsp;document.<br>
+&nbsp;<br>
+Preconditons:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contents&nbsp;-&nbsp;single&nbsp;string&nbsp;representing&nbsp;the&nbsp;complete&nbsp;document<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contents<br>
+&nbsp;&nbsp;&nbsp;&nbsp;label&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;string&nbsp;which&nbsp;identifies&nbsp;the&nbsp;document&nbsp;name<br>
+Postcondition:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instance&nbsp;contains&nbsp;an&nbsp;index&nbsp;of&nbsp;all&nbsp;the&nbsp;words&nbsp;in&nbsp;the&nbsp;document</tt></dd></dl>
+
+<dl><dt><a name="DocIndex-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;string&nbsp;with&nbsp;title&nbsp;and&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;document&nbsp;index</tt></dd></dl>
+
+<dl><dt><a name="DocIndex-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;string&nbsp;with&nbsp;title,&nbsp;number&nbsp;of&nbsp;lines,&nbsp;number&nbsp;of&nbsp;unique&nbsp;words</tt></dd></dl>
+
+<dl><dt><a name="DocIndex-get_context"><strong>get_context</strong></a>(self, term, lines<font color="#909090">=1</font>)</dt><dd><tt>Return&nbsp;a&nbsp;generator&nbsp;over&nbsp;occurrences&nbsp;of&nbsp;the&nbsp;term&nbsp;in&nbsp;context.<br>
+&nbsp;<br>
+The&nbsp;generator&nbsp;will&nbsp;provide&nbsp;a&nbsp;stream&nbsp;of&nbsp;"contexts"&nbsp;for&nbsp;the&nbsp;specified<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(apparent)&nbsp;word&nbsp;in&nbsp;'term'.<br>
+&nbsp;A&nbsp;"context"&nbsp;displays&nbsp;the&nbsp;line&nbsp;containing&nbsp;the&nbsp;word,&nbsp;along&nbsp;with&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;number&nbsp;of&nbsp;preceeding&nbsp;and&nbsp;succeeding&nbsp;lines&nbsp;specified&nbsp;in&nbsp;the&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parameter&nbsp;'lines'&nbsp;(if&nbsp;they&nbsp;exist)&nbsp;...&nbsp;defaults&nbsp;to&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Preconditions:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;term&nbsp;is&nbsp;a&nbsp;string&nbsp;containing&nbsp;the&nbsp;word&nbsp;to&nbsp;look&nbsp;up<br>
+&nbsp;<br>
+Postcondition:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;generator&nbsp;is&nbsp;created&nbsp;to&nbsp;deliver&nbsp;the&nbsp;stream&nbsp;of&nbsp;contexts</tt></dd></dl>
+
+<dl><dt><a name="DocIndex-get_label"><strong>get_label</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;string&nbsp;which&nbsp;serves&nbsp;as&nbsp;the&nbsp;document&nbsp;name.</tt></dd></dl>
+
+<dl><dt><a name="DocIndex-get_text"><strong>get_text</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;document&nbsp;text</tt></dd></dl>
+
+<dl><dt><a name="DocIndex-get_words"><strong>get_words</strong></a>(self)</dt><dd><tt>Return&nbsp;an&nbsp;ordered&nbsp;list&nbsp;of&nbsp;words&nbsp;appearing&nbsp;in&nbsp;this&nbsp;document.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
